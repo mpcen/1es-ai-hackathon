@@ -10,9 +10,12 @@ Fine-tuned from the base model `https://huggingface.co/Sreevishnu/funnel-transfo
 
 -   `license-sourcer` - Used to source licenses from ClearlyDefined.io's database and build the raw dataset used for training. This project includes several scripts that help clean, normalize, and balance the dataset.
 
--   `api` - A simple Node.js API that serves the model and provides a simple interface for making predictions.
+-   `api` - A simple Node.js API that runs inference on the model. This API is hosted on Azure App Service.
 
     -   You must download the model from https://mpcenlegal001.blob.core.windows.net/mpcen-legal-001/models.zip and extract it to `api/models` for the API to work.
+
+    -   You must quantize the trained model in order to be served by Node.js. Use `python3 -m convert --quantize --model_id mpcen/legal-001`
+
     -   `API Endpoints:`
 
         -   POST: https://mpcen-legal-001.azurewebsites.net/
@@ -20,4 +23,6 @@ Fine-tuned from the base model `https://huggingface.co/Sreevishnu/funnel-transfo
 
 -   `ai-model` - A set of python scripts used to perform data-analysis, train the model, and export the model for use in the API.
 
-    -   Azure Blob URL for `final-data.json`, the dataset used for training can be found at: `https://mpcenlegal001.blob.core.windows.net/mpcen-legal-001/final-data.json`. You probably need to request READ permissions.
+    -   A virtual python3 environment is recommended.
+
+    -   Azure Blob URL for `final-data.json`, the dataset used for training can be found at: https://mpcenlegal001.blob.core.windows.net/mpcen-legal-001/final-data.json. You probably need to request READ permissions.
