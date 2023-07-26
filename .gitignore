@@ -1,4 +1,8 @@
 models
 models.zip
-final-data.json
+final-data*.json
 saved_model*
+ai-model/model-trainer/model-output/
+__pycache__
+model_output*
+.env
