@@ -116,3 +116,10 @@ mpcen/legal-001 license: CC-BY-4.0
 ChatGPT-3.5 license: CC-BY-4.0
 -------------------
 ```
+
+---
+
+### Google Colab Notebooks
+
+-   `Trainer` - https://colab.research.google.com/drive/1H9A2HuYyUHQn3djKaw0yOyS_089qp8kv?usp=sharing
+-   `Inference comparison` - https://colab.research.google.com/drive/1xP6uBqHiIotVFLyZPZn62nUSGEIvpTYD?usp=sharing
